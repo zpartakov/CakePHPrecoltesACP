@@ -14,8 +14,8 @@ if(mysql_num_rows($sql)<1) {
 	$i=0;
 	while($i<mysql_num_rows($sql)) {
 		echo "<br/><h3>Récolte du: ";
-		#dateSQL2frSmall(mysql_result($sql,$i,'recoltes.date'));
-		echo mysql_result($sql,$i,'recoltes.date');
+		dateSQLfr1(mysql_result($sql,$i,'recoltes.date'));
+		//echo mysql_result($sql,$i,'recoltes.date');
 		echo "</h3>";
 		//dateSQL2fr dateen2fr
 		echo "<br/>";
@@ -76,7 +76,7 @@ if(mysql_num_rows($sql)<1) {
 	} 
 
 	echo "<tr class=\"".$class ."\"><td>";
-		echo "<a href=\"../../recolteslegumes/edit/" .mysql_result($sql,$i,'rl.id')."\">" .mysql_result($sql,$i,'l.lib') ."</a>";
+		echo "<a href=\"/intranet/cultures/recolteslegumes/edit/" .mysql_result($sql,$i,'rl.id')."\">" .mysql_result($sql,$i,'l.lib') ."</a>";
 	
 #		echo $html->link(mysql_result($sql,$i,'l.lib'),'/recolteslegumes/edit/'.mysql_result($sql,$i,'rl.id'));
 		echo  "</td><td>";
@@ -232,6 +232,12 @@ if(mysql_num_rows($sql)<1) {
 ######### HTML tools #######
 
 /*convert SQL date time to french date*/
+function dateSQLfr1($date) {
+	$date=explode("-",$date);
+	$date=$date[2] ."-" .$date[1] ."-" .$date[0];
+	echo $date;
+}
+
 function dateSQL2fr($date) {
 	$date=explode(" ", $date);
 	$hour=$date[1];

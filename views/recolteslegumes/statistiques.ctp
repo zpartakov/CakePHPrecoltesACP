@@ -152,7 +152,17 @@ if(mysql_num_rows($sqll)>0){
 	$i2++; $i++;
 	}
 //totaux
-	echo "<tr><td colspan=\"2\"><strong>Total</strong></td><td>".$qGPtot."</td><td>".$qPPtot."</td><td>".$qTot."</td><td>" .intval($prixmoyenT/mysql_num_rows($sqll)) ."</td><td><strong><u>" .$prixtot ."</u>.-</strong></td></tr>";
+	echo "<tr>
+	<td colspan=\"2\">
+	<strong>Total</strong></td>
+	<td>".$qGPtot."</td><td>".$qPPtot."</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>".($qTot/$i2)."</td>
+	<td>" .intval($prixmoyenT/mysql_num_rows($sqll)) 
+	."</td><td><strong><u>" .$prixtot ."</u>.-</strong></td></tr>";
 		echo "</table>";
 						echo "<hr />";
 
