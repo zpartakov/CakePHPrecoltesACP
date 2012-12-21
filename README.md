@@ -14,6 +14,9 @@ Liste des outils:
 - système d'entrées des récoltes
 - statistiques
 
+Voir aussi:
+Outils informatiques pour la gestion d'une ACP (agriculture contractuelle de proximité)
+https://github.com/zpartakov/cocagne 
 
 ToDo: 
 
