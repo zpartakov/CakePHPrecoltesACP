@@ -7,7 +7,7 @@ Ce dépôt comprend un outil utilisé de la coopérative agricole "Les Jardins d
 
 Cet outil est libre, développé sous linux
 
-Il requiert AMP (Apache, MySQL et PHP) et cakePHP (required: cakePHP 1.3 https://github.com/cakephp/cakephp/tags)
+Il requiert un serveur web avec AMP (Apache, MySQL et PHP) et cakePHP 1.3
 
 Liste des outils:
 
